@@ -59,7 +59,7 @@ Para utilizar a API Flask com Docker, siga os passos abaixo:
 Para explorar a documentação completa da API no estilo Swagger, visite: [http://localhost:5000/openapi/swagger#/](http://localhost:5000/openapi/swagger#/)
 
 ## Rotas da API
-
+### Consultas Médicas:
 - [POST] `/add_consulta`
   
   Adiciona uma nova consulta à base de dados.
@@ -78,6 +78,27 @@ Para explorar a documentação completa da API no estilo Swagger, visite: [http:
 - [DELETE] `/del_consulta_id`
   
   Remove uma consulta com base em seu nome.
+
+### Medicamentos:
+- [POST] `/medicamento`
+
+  Adiciona um novo medicamento à base de dados.
+
+- [GET] `/medicamentos`
+
+  Retorna uma listagem de todos os medicamentos cadastrados.
+
+- [GET] `/medicamento`
+
+  Retorna informações de um medicamento com base em seu nome.
+
+- [DELETE] `/medicamento`
+
+  Remove um medicamento com base em seu nome.
+
+- [DELETE] `/medicamento_id`
+
+  Remove um medicamento com base em seu Id.
 
 ## Notas de Versão
 
