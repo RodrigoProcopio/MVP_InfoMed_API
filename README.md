@@ -92,4 +92,4 @@ Este projeto foi desenvolvido por Rodrigo Procópio e pode ser encontrado no [Gi
 
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE]() para obter detalhes.
+Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE](https://github.com/RodrigoProcopio/MVP_InfoMed_API/blob/main/LICENSE.md) para obter detalhes.
