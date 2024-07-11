@@ -44,22 +44,36 @@ Para utilizar esta API, siga os passos abaixo:
 
 Para utilizar a API Flask com Docker, siga os passos abaixo:
 
-1. Certifique-se de ter o Docker e o Docker Compose instalados em sua máquina.
+1. Certifique-se de ter o Docker instalado em sua máquina.
 
-2. Navegue até o diretório onde está localizado o arquivo `dockerfile` do projeto.
+2. Navegue até o diretório onde está localizado o arquivo `Dockerfile` do projeto.
 
-3. Construa e inicie os containers com o seguinte comando:
+### Construção e Execução
 
-   ```bash
-   docker-compose up --build
-   ```
+Construa a imagem usando o comando `docker build` na raiz do seu projeto onde está o Dockerfile:
+
+```bash
+docker build -t mvp_infomed_api .
+```
+
+Isso vai construir uma imagem Docker chamada `mvp_infomed_api`.
+
+Execute o container usando `docker run`, mapeando a porta 5000 do container para a porta desejada no host:
+
+```bash
+docker run -p 5000:5000 mvp_infomed_api
+```
+
+Isso vai iniciar o Flask dentro do container e torná-lo acessível na porta 5000 do seu host local.
 
 ## Documentação Swagger
 
 Para explorar a documentação completa da API no estilo Swagger, visite: [http://localhost:5000/openapi/swagger#/](http://localhost:5000/openapi/swagger#/)
 
 ## Rotas da API
+
 ### Consultas Médicas:
+
 - [POST] `/add_consulta`
   
   Adiciona uma nova consulta à base de dados.
@@ -69,17 +83,18 @@ Para explorar a documentação completa da API no estilo Swagger, visite: [http:
 
 - [PUT] `/update_consulta`
   
-  Retorna uma listagem de todas as consultas cadastradas.
+  Atualiza uma consulta existente.
 
 - [GET] `/get_consultas`
   
-  Retorna informações de uma consulta com base em seu nome.
+  Retorna uma listagem de todas as consultas cadastradas.
 
 - [DELETE] `/del_consulta_id`
   
-  Remove uma consulta com base em seu nome.
+  Remove uma consulta com base em seu ID.
 
 ### Medicamentos:
+
 - [POST] `/medicamento`
 
   Adiciona um novo medicamento à base de dados.
@@ -98,7 +113,7 @@ Para explorar a documentação completa da API no estilo Swagger, visite: [http:
 
 - [DELETE] `/medicamento_id`
 
-  Remove um medicamento com base em seu Id.
+  Remove um medicamento com base em seu ID.
 
 ## Notas de Versão
 
